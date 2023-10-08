@@ -85,7 +85,15 @@ body {
     border-bottom: 2px solid rgb(234, 63, 168);
     transition: all 0.2s ease;
 } */
-
+.navItem{
+    transition: all ease 0.2s;
+}
+.navItem:hover{
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: 2px solid rgb(234, 63, 168);
+    transition: all 0.2s ease;
+}
 .right{
     display: flex;
     align-items: center;
@@ -682,6 +690,13 @@ body {
     width: 90px;
     color: aliceblue;
     cursor: pointer;
+    transition: all ease 0.5s;
+}
+.more:hover{
+    overflow: hidden;
+    color: rgb(120, 173, 235);
+    background-color: white;
+    border: 1px solid rgb(120, 173, 235);
 }
 
 .dots{
@@ -791,6 +806,13 @@ body {
     color: aliceblue;
     padding: 5px;
     cursor: pointer;
+    transition: all ease 0.5s;
+    overflow: hidden;
+}
+.sub:hover{
+    background-color: white;
+    color: rgb(235, 76, 174);
+    border: 1px solid rgb(235, 76, 174);
 }
 
 /* @media only screen and (max-width:800px){
