@@ -5,11 +5,32 @@
     overflow-x: hidden;
     /* background-color: black; */
     color: rgb(94, 21, 110);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: KarlaBold, sans-serif;
+}
+@font-face {
+    font-family: KarlaBold;
+    src: url(fonts/Karla-Bold.ttf);
+}
+@font-face {
+    font-family: CodeLight;
+    src: url(fonts/CODE\ Light.otf);
+}
+@font-face {
+    font-family: CodeBold;
+    src: url(fonts/CODE\ Bold.otf);
 }
 
+@font-face {
+    font-family: Fira;
+    src: url("fonts/Fira Sans Extra Condensed.ttf");
+}
+
+@font-face {
+    font-family: didot;
+    src: url("fonts/Italian-Didot-W90-Normal.ttf");
+}
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: KarlaBold, sans-serif;
   }
 
 .main{
@@ -102,6 +123,9 @@ body {
 .main{
     position: relative;
 }
+
+
+
 #menu__toggle {
     opacity: 0;
     transition: all ease 1s;
@@ -181,7 +205,7 @@ body {
   .menu__item {
     display: block;
     padding: 12px 24px;
-    color: #333;
+    /* color: rgb(234, 63, 168); */
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 600;
@@ -280,7 +304,7 @@ body {
     z-index: 100;
 }
 
-@media only screen and (max-width:700px){
+/* @media only screen and (max-width:700px){
     #season{
         visibility: hidden;
     }
@@ -290,7 +314,7 @@ body {
     #leftArrow,#rightArrow{
         visibility: hidden;
     }
-}
+} */
 
 .seasons{
     display: flex;
@@ -302,7 +326,6 @@ body {
 #spring{
     background-color: rgb(199, 226, 218);
     min-width: 25%;
-
     min-height: 100%;
     display: flex;
     align-items: center;
@@ -341,12 +364,12 @@ body {
 
 @media only screen and (max-width:700px){
     #summer,#winter,#autumn,#spring{
-        width: 50%;
+        width: 25%;
     }
 }
 @media only screen and (max-width:300px){
     #summer,#winter,#autumn,#spring{
-        width: 100%;
+        width: 25%;
     }
 }
 
@@ -589,13 +612,13 @@ body {
     /* background-image: url(./images/background_2.png); */
 }
 
-@media only screen and (max-width:700px){
+/* @media only screen and (max-width:700px){
     .feedback{
         flex-direction: column;
         gap: 20px;
         height: fit-content;
     }
-}
+} */
 
 .feedImg{
     position: relative;
@@ -767,9 +790,10 @@ body {
     align-items: center;
     color: aliceblue;
     padding: 5px;
+    cursor: pointer;
 }
 
-@media only screen and (max-width:800px){
+/* @media only screen and (max-width:800px){
     .footer{
         flex-direction: column;
         gap: 25px;
@@ -783,7 +807,7 @@ body {
         align-items: center;
         gap: 10px;
     }
-}
+} */
 
 .small_image{
     width:100%;
@@ -815,7 +839,7 @@ body {
 }
 
 
-
+/* 
 @media only screen and (max-width:600px){
     .full img{
         width:100%;
@@ -831,4 +855,71 @@ body {
         flex-direction: column;
         gap: 10px;
     }
+} */
+
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #008bba86;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+  }
+
+  .image:hover .overlay {
+    height: 100%;
+  }
+
+.overlay{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.view{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.viewbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    border: 2px solid white;
+    color: white;
+    height: 30px;
+}
+
+.overlayCon{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+    padding: 5px;
+    /* align-items: center; */
+}
+
+.name{
+    font-size: 15px;
+    overflow: hidden;
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.price{
+    color: rgb(235, 76, 174);
+    font-size: 14px;
 }
