@@ -13,7 +13,7 @@ body {
   }
 
 .main{
-    height: 80vh;
+    height: 600px;
     position: relative;
     overflow-y: hidden;
     background-size: cover;
@@ -104,9 +104,10 @@ body {
 }
 #menu__toggle {
     opacity: 0;
+    transition: all ease 1s;
   }
   #menu__toggle:checked + .menu__btn > span {
-    position: absolute;
+    position: fixed;
     height: 30px;
     /* background-color: #333; */
     opacity: 1;
@@ -114,7 +115,8 @@ body {
     top: 5%;
     left: 4%;
     z-index: 60;
-    /* transform: rotate(45deg); */
+    transition: all ease 1s;
+    transform: rotate(360deg);
     
   }
 
@@ -239,7 +241,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding-left: 20px;
-    padding-bottom: 150px;
+    padding-bottom: 130px;
     height: 42rem;
     z-index: 100;
 }
@@ -582,9 +584,17 @@ body {
     /* background-color: aqua; */
     margin: 5vw;
     overflow: hidden;
-    max-height: 400px;
+    /* max-height: 400px; */
     margin-top: 0;
     /* background-image: url(./images/background_2.png); */
+}
+
+@media only screen and (max-width:700px){
+    .feedback{
+        flex-direction: column;
+        gap: 20px;
+        height: fit-content;
+    }
 }
 
 .feedImg{
@@ -608,7 +618,7 @@ body {
     width: 60%;
     margin: 3vw;
     position: relative;
-    height: 40vh;
+    /* height: 40vh; */
 }
 
 .top20{
@@ -771,6 +781,54 @@ body {
     .rightFoot{
         justify-content: center;
         align-items: center;
+        gap: 10px;
+    }
+}
+
+.small_image{
+    width:100%;
+}
+
+.small_image_ele{
+    width:100%;
+    display:flex;
+}
+
+.half{
+    width:50%;
+    height:300px;
+}
+
+.full{
+    width:100%;
+    height:300px;
+}
+
+.full img{
+    width:70%;
+    display:block;
+    margin:auto;
+}
+
+.small_image{
+    display:none;
+}
+
+
+
+@media only screen and (max-width:600px){
+    .full img{
+        width:100%;
+    }
+}
+
+@media only screen and (max-width:1000px){
+    .row{
+        display:none;
+    }
+    .small_image{
+        display:flex;
+        flex-direction: column;
         gap: 10px;
     }
 }
